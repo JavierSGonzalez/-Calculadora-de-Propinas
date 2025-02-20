@@ -11,6 +11,7 @@ while True:
             break
         elif res == "2":
             print("Muchas gracias por usar la calculadora de propinas")
+            exit()
         else:
             print("Escribe una opción valida")
 
@@ -61,5 +62,6 @@ while True:
             break
         elif salir == "n":
             print("Muchas gracias por usar la calculadora de propinas")
+            exit()
         else:
             print("¿Si o No?")
