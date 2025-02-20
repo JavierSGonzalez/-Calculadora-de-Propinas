@@ -16,8 +16,15 @@ while True:
             print("Escribe una opción valida")
 
     print("Monto total de la cuenta - Escribe solo el número")
-    i = float(input())  
-    print(f"${i} \n")
+
+    while True:
+        try:
+            i = float(input())
+            i = round(i,2)  
+            print(f"${i} \n")
+            break
+        except ValueError:
+            print("Digitalo como número")
 
     print("Porcentaje de propina que desea agregar, escriba '=' y el porcentaje")
     print("=10%")
@@ -45,14 +52,14 @@ while True:
     pe = float(input())
 
     tot = (i+propinaA) / pe
-    totA= round(tot, 2)
+    tot = round(tot,2)
 
-    historial.append(totA)
+    historial.append(tot)
 
-    print(f"Total equivalente por persona: ${totA} \n")
+    print(f"Total equivalente por persona: ${tot} \n")
     print(f"Historial de totales equivalentes: $ {historial}")
     for tot in historial:
-        print(f"${totA}")
+        print(f"${tot}")
 
     print("¿Quieres calcular otra propina? Responde s/n:")
     while True:
